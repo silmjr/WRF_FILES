@@ -12,7 +12,7 @@ else
 	ls -1 >> file.txt
 	diff fileOld.txt file.txt >> dif.txt
 	git add -A 
-	git commit -m " "
+	git commit -m "  "
 fi
 
 #while read line 
