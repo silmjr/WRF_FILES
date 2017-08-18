@@ -1,8 +1,12 @@
 #! /bin/bash 
 
-if (git diff-index --quiet --cached HEAD) ; then
-	echo "entrei"
-	if [-e /fileOld.txt]; then
+if !(git status --porcelain);then
+    echo "IT IS CLEAN"
+else
+
+	file="file.txt"
+	if [ -f "$file" ]
+	then
 		rm fileOld.txt
 	fi
 	mv file.txt fileOld.txt
