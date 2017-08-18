@@ -1,7 +1,8 @@
 #! /bin/bash 
 
 if (git diff-index --quiet --cached HEAD) ; then
-	if [-e fileOld.txt]; then
+	echo "entrei"
+	if [-e /fileOld.txt]; then
 		rm fileOld.txt
 	fi
 	mv file.txt fileOld.txt
