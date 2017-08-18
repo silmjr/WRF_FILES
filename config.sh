@@ -1,6 +1,6 @@
 #! /bin/bash 
 
-if !(git status --porcelain);then
+if (git status --porcelain);then
     echo "IT IS CLEAN"
 else
 
