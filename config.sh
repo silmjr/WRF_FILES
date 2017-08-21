@@ -35,8 +35,8 @@ else
 	
 	while read linha 
 	do
-	link = "https://raw.githubusercontent.com/silmjr/WRF_FILES/master/"
-	link = $link$linha 
+	link="https://raw.githubusercontent.com/silmjr/WRF_FILES/master/"
+	link=$link$linha 
 		#Insert aqui... 
 		echo $linha
 		echo $link 
