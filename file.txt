@@ -1,0 +1,10 @@
+config.sh
+file.txt
+guanambi3_12-01-2016_1700_200m.kmz
+guanambi3_12-01-2016_1800_200m.kmz
+guanambi3_12-01-2016_1900_200m.kmz
+guanambi3_12-01-2016_2000_200m.kmz
+WRF-SURFACE-12-01-2016_1700.kmz
+WRF-SURFACE-12-01-2016_1800.kmz
+WRF-SURFACE-12-01-2016_1900.kmz
+WRF-SURFACE-12-01-2016_2000.kmz
