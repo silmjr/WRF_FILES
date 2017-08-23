@@ -1,19 +1,27 @@
 #! /bin/bash 
-#Verifica se houve alteracão no repositório
+git fetch origin
 if !(git status --porcelain);then
-    echo "IT IS CLEAN"
-    ls -1 >> file.txt 
+    #Verifica se houve alteracão no repositório
+	echo "IT IS CLEAN"
+    file="file.txt"
+	if [ -f "$file" ]; then
+		rm file.txt
+	fi
+	ls -1 >> file.txt 
 else
+	file="file.txt"
+	if ![ -f "$file" ]; then
+		ls -1 >> file.txt
+	fi
+	
 	#caso haja verifica se o fileOld existe, se existe deleta	
 	file="fileOld.txt"
 	if [ -f "$file" ]; then
-		echo "FileOld"
 		rm fileOld.txt
 	fi
 	#Verifica se existe o arquivo dif.txt, se existir deleta
 	file="dif.txt"
 	if [ -f "$file" ]; then
-		echo "Diff"
 		rm dif.txt
 	fi
 	#modifica o nome do arquivo file, para fileOld
@@ -37,7 +45,7 @@ else
 	do
 	link="https://raw.githubusercontent.com/silmjr/WRF_FILES/master/"
 	link=$link$linha 
-		#Insert aqui... 
+		mysql -u root -p"huebr123" -e "INSERT INTO `files_location`(`file_name`, `file_link`) VALUES ([$linha],[$link]);"		
 		echo $linha
 		echo $link 
 	done < dif.txt
